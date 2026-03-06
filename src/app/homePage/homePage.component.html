@@ -1,0 +1,37 @@
+<header class="header">
+  <div>{{ companyName }}</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div id="about" class="div">
+  <h2>About Us</h2>
+  <p>
+    We are a technology company specializing in modern web platforms,
+    cloud solutions, and software consulting.
+  </p>
+</div>
+
+<div id="services" class="div">
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="card" *ngFor="let service of services">
+      <h3>{{ service.title }}</h3>
+      <p>{{ service.description }}</p>
+    </div>
+  </div>
+
+</div>
+
+<div id="contact" class="div contact">
+  <h2>Contact Us</h2>
+  <p>Email: {{ email }}</p>
+</div>
+
+<footer class="footer">
+  © 2026 {{ companyName }}
+</footer>

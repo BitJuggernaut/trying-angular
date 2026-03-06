@@ -1,0 +1,52 @@
+@primary: #2c3e50;
+@accent: #3498db;
+@light: #f4f4f4;
+
+.header {
+  background: @primary;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+
+    &:hover {
+      color: @accent;
+    }
+  }
+}
+
+.div {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+
+  .card {
+    background: @light;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+  }
+}
+
+.contact {
+  background: @light;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: @primary;
+  color: white;
+}
