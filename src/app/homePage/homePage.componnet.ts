@@ -1,30 +1,47 @@
 import { Component } from '@angular/core';
-import { Service } from './homePage.componnet.models';
+import { Service } from './homePage.componet.models';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   templateUrl: './homePage.component.html',
-  styleUrls: ['./homePage.component.less']
+  styleUrls: ['./homePage.component.less'],
 })
 export class HomeComponent {
-
-   companyName = 'TechNova Solutions';
+  companyName = 'TechNova Solutions';
 
   services: Service[] = [
     {
       title: 'Web Development',
-      description: 'Building scalable and modern web applications.'
+      description: 'Building scalable and modern web applications.',
     },
     {
       title: 'Cloud Solutions',
-      description: 'Deploying secure cloud infrastructure.'
+      description: 'Deploying secure cloud infrastructure.',
     },
     {
       title: 'Consulting',
-      description: 'Helping companies improve their technology stack.'
-    }
+      description: 'Helping companies improve their technology stack.',
+    },
   ];
 
   email = 'contact@technova.com';
+
+  showContact = false;
+
+  toggleContact() {
+    this.showContact = !this.showContact;
+  }
+
+  addService(service: Service) {
+    this.services.push(service);
+  }
+
+  removeService(title: string) {
+    this.services = this.services.filter((s) => s.title !== title);
+  }
+
+  getServiceCount() {
+    return this.services.length;
+  }
 }

@@ -10,13 +10,15 @@
 <div id="about" class="div">
   <h2>About Us</h2>
   <p>
-    We are a technology company specializing in modern web platforms,
-    cloud solutions, and software consulting.
+    We are a technology company specializing in modern web platforms, cloud
+    solutions, and software consulting.
   </p>
 </div>
 
 <div id="services" class="div">
   <h2>Our Services</h2>
+
+  <button (click)="toggleContact()">Toggle Contact</button>
 
   <div class="services">
     <div class="card" *ngFor="let service of services">
@@ -24,14 +26,11 @@
       <p>{{ service.description }}</p>
     </div>
   </div>
-
 </div>
 
-<div id="contact" class="div contact">
+<div *ngIf="showContact" id="contact" class="div contact">
   <h2>Contact Us</h2>
   <p>Email: {{ email }}</p>
 </div>
 
-<footer class="footer">
-  © 2026 {{ companyName }}
-</footer>
+<footer class="footer">© 2026 {{ companyName }}</footer>
