@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { Service } from './homePage.componet.models';
 import { NavBarComponent } from './navBar/navBar.componnet';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   templateUrl: './homePage.component.html',
   styleUrls: ['./homePage.component.less'],
-  imports: [NavBarComponent],
+  imports: [NavBarComponent, CommonModule],
 })
 export class HomeComponent {
   companyName = 'TechNova Solutions';

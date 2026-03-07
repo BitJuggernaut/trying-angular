@@ -21,9 +21,11 @@
   </div>
 </div>
 
-<div *ngIf="showContact" id="contact" class="div contact">
-  <h2>Contact Us</h2>
-  <p>Email: {{ email }}</p>
-</div>
+@if (showContact) {
+  <div id="contact" class="div contact">
+    <h2>Contact Us</h2>
+    <p>Email: {{ email }}</p>
+  </div>
+}
 
 <footer class="footer">© 2026 {{ companyName }}</footer>
