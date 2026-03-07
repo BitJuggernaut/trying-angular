@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { Service } from './homePage.componet.models';
+import { NavBarComponent } from './navBar/navBar.componnet';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   templateUrl: './homePage.component.html',
   styleUrls: ['./homePage.component.less'],
+  imports: [NavBarComponent],
 })
 export class HomeComponent {
   companyName = 'TechNova Solutions';
