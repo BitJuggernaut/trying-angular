@@ -4,3 +4,4 @@ npm i -D @vitest/browser-playwright
 npm install -D vitest jsdom @vitest/ui
 npm install -D @analogjs/vitest-angular
 npm install -D @analogjs/vitest-angular vite
+npm install -D @analogjs/vite-plugin-angular
